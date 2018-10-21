@@ -14,4 +14,5 @@ script:
   - ./gradlew test
   - ./gradlew jacocoTestReport
 after_script:
+  - rn "./build/reports/jacoco/test/jacocoTestReport.xml" "./build/reports/jacoco/test/jacoco.xml"
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t jacoco -d
