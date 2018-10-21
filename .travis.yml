@@ -6,6 +6,6 @@ jdk:
 before_install:
   - chmod +x gradlew
 script:
-  - ./gradlew assemble
   - ./gradlew build --scan -s
   - ./gradlew test
+  - ./gradlew jacocoTestReport
