@@ -14,5 +14,5 @@ script:
   - ./gradlew test
   - ./gradlew jacocoTestReport
 after_success:
-  - ./cc-test-reporter format-coverage -d -t jacoco ./build/reports/jacoco/test/jacocoTestReport.xml
+  - ./cc-test-reporter format-coverage --prefix /home/travis/build/donmahallem/Dota2Parser/src/main/java/ -d -t jacoco ./build/reports/jacoco/test/jacocoTestReport.xml
   - ./cc-test-reporter upload-coverage -d
