@@ -59,7 +59,7 @@ public class ToJsonFileParser extends FileParser {
     }
 
     public void clearKeysWithPrefix(String key){
-        System.out.println("Clear: "+key);
+        //System.out.println("Clear: "+key);
         for(String currentKey:this.mFirstItemInBlock.keySet()){
             if(currentKey.length()<key.length()){
                 continue;
@@ -78,11 +78,6 @@ public class ToJsonFileParser extends FileParser {
     }
 
     public boolean hasFirstItemWritten(String key){
-        if(key.startsWith("DOTAHeroes\\\\npc_dota_hero_chen\\\\RenderablePortrait")){
-            final boolean result= this.mFirstItemInBlock.getOrDefault(key,false);
-            System.out.println("Reuslt: "+key+" _ "+result);
-            return result;
-        }
         return this.mFirstItemInBlock.getOrDefault(key,false);
     }
 
