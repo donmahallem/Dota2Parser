@@ -21,14 +21,14 @@ public class ToJsonFileParserUnitTest {
     }
     @Test
     public void addition_isCorrect3() throws IOException {
-        FileParser fileParser=new HeroesFileParser("./src/test/npc_heroes.txt");
+        FileParser fileParser=new HeroesFileParser("./npc_heroes.txt");
         fileParser.parse();
 
     }
     @Test
     public void addition_isCorrect4() throws IOException {
         BufferedSink sink=Okio.buffer(Okio.sink(new File("testoutput.json")));
-        FileParser fileParser=new ToJsonFileParser("./src/test/npc_heroes.txt",sink);
+        FileParser fileParser=new ToJsonFileParser("./npc_heroes.txt",sink);
         fileParser.parse();
         sink.flush();
         sink.close();
