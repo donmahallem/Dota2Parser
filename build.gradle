@@ -26,6 +26,7 @@ buildScan {
 jacocoTestReport {
     reports {
         xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
     }
