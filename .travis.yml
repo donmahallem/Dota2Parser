@@ -12,10 +12,15 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-script:
-  - ./gradlew build --scan -s
-  - ./gradlew test
-  - ./gradlew jacocoTestReport
 after_success:
   - JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter format-coverage ./build/reports/jacoco/test/jacocoTestReport.xml --input-type jacoco
   - ./cc-test-reporter upload-coverage -d
+jobs:
+  include:
+    - stage: test
+      script:
+        - ./gradlew build --scan -s
+        - ./gradlew test
+        - ./gradlew jacocoTestReport
+    - stage: deploy
+      script: ./gradlew bintrayUpload
