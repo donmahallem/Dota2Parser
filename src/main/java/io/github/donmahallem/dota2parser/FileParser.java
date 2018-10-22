@@ -54,8 +54,6 @@ public abstract class FileParser {
                 //System.out.println("is comment");
                 continue;
             } else if (line.matches("^\\{[\\s]*$")) {
-                //Begin Block
-                //System.out.println("Begin Block");
                 this.startBlock(currentPath,name);
                 currentPath.add(name);
             } else if (line.matches("^\\}[\\s]*$")) {
