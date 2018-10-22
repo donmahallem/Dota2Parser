@@ -24,4 +24,5 @@ jobs:
         - ./gradlew jacocoTestReport
     - stage: deploy
       if: branch = master
+      if: tags = true
       script: ./gradlew bintrayUpload
