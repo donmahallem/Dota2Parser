@@ -1,3 +1,3 @@
 Init
 
-is it fixed?
+is it fixed? or not?
