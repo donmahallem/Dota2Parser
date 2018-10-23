@@ -2,22 +2,20 @@ language: java
 install: true
 env:
   global:
-  - CC_TEST_REPORTER_ID=4f118210cdde92fa63417afb0b0ab3602039dcd6292224226bc7ca2e29670484
-  - secure: Rm/OSEHC528QoJp3MLQ8pGxZxAZ+DJQPNsZIKS7WDtGSK/olbxr81hdlO9+L9lxrVZqw6GIjA8B9I3/LRFkT5yrC9Rj02uItLZ59oYBjIFUQLtuoGVKyx5Sljo7kOU7ZqLXyhkasizGDc69A4dHf7PTlYLlF0+5v2Cvr8zYGhsQtidfd9xyejC6gtomev9ejm65UYuph5GZezVKUz5v3MDLOE28in7v0zFGguVHSQOqzriRKfMON7iOAdfgh2DO5NW4XpAkJNKuTZif4CvMxMZCbmVffc2/J7iK4nubGAkYgOGfT8eoAyXFGysFUnGBch9xkRDFBrvBk2TqeSZf5s3FVIFspUFOA2ahpdfjUxPQsAqDtH+cwS9ePTCkYwNMO+Eo8FVCZPIB3scXz0IN1YrJnC52QNUMvM8QZq95G2dWlTnyWYqr/+FHs/sFBN6BRv0zQc4QF7Pi+ewoD97yksZaaJa28uO6SU3fnkTDHuFyCZZAQ93cWhYqY/Dv4k/Uku+n/V4i0tlQbqpzqLWSqOMWuQurAVmBGhXvnLgaLUUAQaBwHxODw/avlx+TTYMh3FGUonst18/ku0YhBcy8mESOj0kjYHfzuvy78KQgbb1Q8QDkclGTBd/XwYnfkZf5XpQxWhbix1wuzUQ0hGtY68uD7toBoVC7m5U0KRwVke/o=
-  - secure: VOdc0MUvry0YydKFNd3U6ofxF7u8zI5JaKNP67ehsfvKquljpAbOjKJRP3prnduwLWvNYSexPW2Ocphv2N8gG+80D1DPGG8sffrWQV7WnR0mcGRkoY8xp5uavi7HtLfuTNih07Cga+LX7sdaEWX380lCcM+z/oyjvO8i7vb0U6lw0fYT6n0YMHX3YasJqOwbUqiX1iZMhhL7tJoTRvNbJl8tiEBYAmDwOik9hdxt9UMja64UeiNzUp9sczsTF2Z4WdiLnI/VHcHq9auj3sZjQMDgQ2/HBDLn3Sc6BCZMzbxwuioL01ay/X+j4ZFWIX1nvkaFtBvHXQJt+Bw+dkhPfVHqEGR80Wt9MlFoaq9SYo0ItIbBsd7m9dt6v4EdYWCwzqe5nmRpZS/Rjgks4lvZR17XuiSL1PGFlKX9Cki0x4eAFDKzsq0E3OBk+wBuaAzfAyNbPFb4iRX+c1+V3Bq5FP36p2zDcG4RUIw5ChZR4e62TG6kjUecYbNgBefNH8OGM21dTcExKrpE/CrMS83Bbzj1VMp4wF+UzDzehZsjjWkNIRuzbj/Vn8QQqIMcVAKMuyx7d1Pjm+pplglzi25+B3A4xhkK3a6GDfooUwV0tSQvMgRFBgnD1dM9YfGit0j5iRE6chQOK0ewlOF4AVaEQFUPX4zjFwz+uLpVLM+hnzM=
+    - CC_TEST_REPORTER_ID=4f118210cdde92fa63417afb0b0ab3602039dcd6292224226bc7ca2e29670484
+    - secure: Rm/OSEHC528QoJp3MLQ8pGxZxAZ+DJQPNsZIKS7WDtGSK/olbxr81hdlO9+L9lxrVZqw6GIjA8B9I3/LRFkT5yrC9Rj02uItLZ59oYBjIFUQLtuoGVKyx5Sljo7kOU7ZqLXyhkasizGDc69A4dHf7PTlYLlF0+5v2Cvr8zYGhsQtidfd9xyejC6gtomev9ejm65UYuph5GZezVKUz5v3MDLOE28in7v0zFGguVHSQOqzriRKfMON7iOAdfgh2DO5NW4XpAkJNKuTZif4CvMxMZCbmVffc2/J7iK4nubGAkYgOGfT8eoAyXFGysFUnGBch9xkRDFBrvBk2TqeSZf5s3FVIFspUFOA2ahpdfjUxPQsAqDtH+cwS9ePTCkYwNMO+Eo8FVCZPIB3scXz0IN1YrJnC52QNUMvM8QZq95G2dWlTnyWYqr/+FHs/sFBN6BRv0zQc4QF7Pi+ewoD97yksZaaJa28uO6SU3fnkTDHuFyCZZAQ93cWhYqY/Dv4k/Uku+n/V4i0tlQbqpzqLWSqOMWuQurAVmBGhXvnLgaLUUAQaBwHxODw/avlx+TTYMh3FGUonst18/ku0YhBcy8mESOj0kjYHfzuvy78KQgbb1Q8QDkclGTBd/XwYnfkZf5XpQxWhbix1wuzUQ0hGtY68uD7toBoVC7m5U0KRwVke/o=
+    - secure: VOdc0MUvry0YydKFNd3U6ofxF7u8zI5JaKNP67ehsfvKquljpAbOjKJRP3prnduwLWvNYSexPW2Ocphv2N8gG+80D1DPGG8sffrWQV7WnR0mcGRkoY8xp5uavi7HtLfuTNih07Cga+LX7sdaEWX380lCcM+z/oyjvO8i7vb0U6lw0fYT6n0YMHX3YasJqOwbUqiX1iZMhhL7tJoTRvNbJl8tiEBYAmDwOik9hdxt9UMja64UeiNzUp9sczsTF2Z4WdiLnI/VHcHq9auj3sZjQMDgQ2/HBDLn3Sc6BCZMzbxwuioL01ay/X+j4ZFWIX1nvkaFtBvHXQJt+Bw+dkhPfVHqEGR80Wt9MlFoaq9SYo0ItIbBsd7m9dt6v4EdYWCwzqe5nmRpZS/Rjgks4lvZR17XuiSL1PGFlKX9Cki0x4eAFDKzsq0E3OBk+wBuaAzfAyNbPFb4iRX+c1+V3Bq5FP36p2zDcG4RUIw5ChZR4e62TG6kjUecYbNgBefNH8OGM21dTcExKrpE/CrMS83Bbzj1VMp4wF+UzDzehZsjjWkNIRuzbj/Vn8QQqIMcVAKMuyx7d1Pjm+pplglzi25+B3A4xhkK3a6GDfooUwV0tSQvMgRFBgnD1dM9YfGit0j5iRE6chQOK0ewlOF4AVaEQFUPX4zjFwz+uLpVLM+hnzM=
 jdk:
-- oraclejdk8
+  - oraclejdk8
 before_install:
-- chmod +x gradlew
+  - chmod +x gradlew
 before_script:
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
-  > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- "./cc-test-reporter before-build"
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - "./cc-test-reporter before-build"
 after_success:
-- JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter format-coverage ./build/reports/jacoco/test/jacocoTestReport.xml
-  --input-type jacoco
-- "./cc-test-reporter upload-coverage -d"
+  - JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter format-coverage ./build/reports/jacoco/test/jacocoTestReport.xml --input-type jacoco
+  - "./cc-test-reporter upload-coverage -d"
 jobs:
   include:
   - stage: test
