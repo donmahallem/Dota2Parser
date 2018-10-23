@@ -1,28 +1,29 @@
 language: java
 install: true
-
 env:
   global:
-    - CC_TEST_REPORTER_ID=4f118210cdde92fa63417afb0b0ab3602039dcd6292224226bc7ca2e29670484
+  - CC_TEST_REPORTER_ID=4f118210cdde92fa63417afb0b0ab3602039dcd6292224226bc7ca2e29670484
+  - secure: yIV38pVjqxOemaYyFZTVHo4s3/iY4C76XQhzIx5OJfAEVkcMeDNRqBAg8LXNK9dXU/Be+ETxeYwMUcWJI2tN9wl2+1p/DBf6gwxHcK3tjQ6lW7qcUdLsjcGDP1JUSGCluWxzaYO7kdm5l1Vp6O/fiWhPLMqEUUdq6WS5JuEm//FATk2rxCxX+NudOkrTT7fHd/mFiShRVx8GGs5DGazgdY0b59GwTAArvN7i0o0biATYHivFFPv7gAMHtPifn0OvTR2Ytafo3OU6B5SeD2lEsANbP/trNd70gWzuMH0ephbz+rTYbEFypdhmKYL8lVHF1esvN3oD5d7U2lz8evq3+0PV7puZZ+7CEdzA0TPTyEVa68Ta+ThugmifPO9dB+eI20AST+fICstRDm86j98dvKmhioZcqmnZ6QNlQ4UZvolyKkDo/qv03EHwb7FSKOhAITgwg6325FW8naFAyNPhA1zeIrKpAhJ0MNnI3/mU7PqgAnocl0X8//B+z9LruewRG3QIJpATLTKdAy5rADaqScrO3DZsoKCxI/1AQ5JeK1h7OyeagymyE5P4jWMAwVmDZRR5Nh9Cahz9YeSmfhrYOnm9t3PenR12wBkFrBhhtQSIbX5kAMT1z5H8KPHbHlHsJjua8WkvRF7HZT3RkF0Yhikh/T2fcILKID0UwKpIOvU=
 jdk:
-  - oraclejdk8
+- oraclejdk8
 before_install:
-  - chmod +x gradlew
+- chmod +x gradlew
 before_script:
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  > ./cc-test-reporter
+- chmod +x ./cc-test-reporter
+- "./cc-test-reporter before-build"
 after_success:
-  - JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter format-coverage ./build/reports/jacoco/test/jacocoTestReport.xml --input-type jacoco
-  - ./cc-test-reporter upload-coverage -d
+- JACOCO_SOURCE_PATH=src/main/java ./cc-test-reporter format-coverage ./build/reports/jacoco/test/jacocoTestReport.xml
+  --input-type jacoco
+- "./cc-test-reporter upload-coverage -d"
 jobs:
   include:
-    - stage: test
-      script:
-        - ./gradlew build --scan -s
-        - ./gradlew test
-        - ./gradlew jacocoTestReport
-    - stage: deploy
-      if: branch = master
-      if: tags = true
-      script: ./gradlew bintrayUpload
+  - stage: test
+    script:
+    - "./gradlew build --scan -s"
+    - "./gradlew test"
+    - "./gradlew jacocoTestReport"
+  - stage: deploy
+    if: branch = master
+    script: "./gradlew bintrayUpload"
