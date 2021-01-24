@@ -1,5 +1,5 @@
 plugins {
-    id 'com.gradle.build-scan' version '1.16'
+    id 'com.gradle.build-scan' version '2.3'
     id 'java'
     id 'jacoco'
     id 'maven-publish'
@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'io.github.donmahallem'
-version '1.0.1'
+version '1.0.2'
 
 sourceCompatibility = 1.8
 
@@ -17,9 +17,9 @@ repositories {
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
-    implementation 'com.squareup.okio:okio:2.1.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
 }
 buildScan {
     termsOfServiceUrl = 'https://gradle.com/terms-of-service'
@@ -80,7 +80,6 @@ publishing {
     }
 }
 
-println  System.getenv('BINTRAY_USER')
 bintray {
     user = System.getenv('BINTRAY_USER')
     key = System.getenv('BINTRAY_KEY')

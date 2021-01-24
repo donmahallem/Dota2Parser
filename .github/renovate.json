@@ -1,0 +1,10 @@
+{
+    "automerge":true,
+    "baseBranches": [
+        "dev"
+    ],
+    "extends": [
+        "config:base"
+    ],
+    "requiredStatusChecks":null
+}
