@@ -1,5 +1,5 @@
 plugins {
-    id 'com.gradle.build-scan' version '3.8.1'
+    id 'com.gradle.build-scan' version '3.9'
     id 'java'
     id 'jacoco'
     id 'maven-publish'
